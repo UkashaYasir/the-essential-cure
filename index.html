@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#f5ebd5" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Preconnect to external domains for faster loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Preload critical fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" as="style" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" />
+
+  <!-- DNS Prefetch for external resources -->
+  <link rel="dns-prefetch" href="https://wa.me" />
+
+  <title>The Essential Cure — Premium Natural Hair Oil</title>
+  <meta name="description"
+    content="Revive your hair naturally with The Essential Cure's 100% natural hair oil. Reduces hair fall, promotes growth, and adds natural shine." />
+  <meta name="author" content="The Essential Cure" />
+  <meta name="keywords" content="hair oil, natural hair care, hair growth, hair fall treatment, organic hair oil, Pakistan" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="The Essential Cure — Premium Natural Hair Oil" />
+  <meta property="og:description" content="100% Natural Formula for Stronger, Healthier, Shinier Hair" />
+  <meta property="og:type" content="product" />
+  <meta property="og:locale" content="en_PK" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://theessentialcure.com/" />
+  <meta property="og:site_name" content="The Essential Cure" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Essential Cure — Premium Natural Hair Oil" />
+  <meta name="twitter:description" content="100% Natural Formula for Stronger, Healthier, Shinier Hair" />
+  <meta name="twitter:image" content="/og-image.png" />
+
+  <!-- Performance: Preload all 3 critical hero images in parallel -->
+  <link rel="preload" as="image" href="/src/assets/hero-product.png" type="image/png" fetchpriority="high" />
+  <link rel="preload" as="image" href="/src/assets/hero-product-2.png" type="image/png" />
+  <link rel="preload" as="image" href="/src/assets/hero-product-3.png" type="image/png" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "The Essential Cure Hair Oil",
+    "description": "100% Natural hair oil that reduces hair fall, promotes growth, and adds shine. Made with pure herbal ingredients.",
+    "image": "/og-image.png",
+    "brand": { "@type": "Brand", "name": "The Essential Cure" },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "PKR",
+      "price": "1700",
+      "availability": "https://schema.org/InStock",
+      "seller": { "@type": "Organization", "name": "The Essential Cure" }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "500"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

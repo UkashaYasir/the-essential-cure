@@ -1,0 +1,33 @@
+/* Reset default Vite styles — full width, no constraints */
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* Prevent horizontal overflow on mobile */
+html,
+body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 640px) {
+
+  button,
+  a {
+    min-height: 44px;
+  }
+}
+
+/* Fix iOS input zoom */
+@media (max-width: 640px) {
+
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
