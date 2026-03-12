@@ -1,6 +1,6 @@
 # The Essential Cure 🌿✨
 
-![Premium Hair Care](https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?q=80&w=1200&auto=format&fit=crop)
+![The Essential Cure Hair Oil](public/products/main-product.png)
 
 ### **Elevating Natural Hair Care with a Premium E-Commerce Experience**
 
