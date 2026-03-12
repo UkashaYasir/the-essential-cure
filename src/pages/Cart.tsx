@@ -1034,7 +1034,7 @@ const Cart = () => {
                             Aapne abhi tak koi item add nahi kiya. Hair growth start karne ke liye shop karein!
                         </p>
                         <Link
-                            to="/"
+                            to="/shop"
                             className="inline-flex items-center justify-center gap-2 bg-gradient-gold text-card font-body font-semibold px-8 py-4 rounded-full shadow-luxury hover:shadow-luxury-lg hover:scale-105 transition-all duration-300"
                         >
                             Shop Again

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ShoppingBag, Star, Package, ArrowRight, Loader2 } from 'lucide-react';
+import { ShoppingBag, Star, Package, ArrowRight, Loader2, Sparkles } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { supabase } from '@/lib/supabase';
@@ -34,7 +34,7 @@ const FALLBACK_PRODUCTS: Product[] = [
         image_url: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?q=80&w=800&auto=format&fit=crop",
         stock: 99,
         rating: 4.9,
-        soldCount: 450,
+        soldCount: 766,
     }
 ];
 
@@ -155,7 +155,7 @@ const Shop = () => {
                                                             className={starIdx < Math.floor(product.rating || 4.9) ? "" : "text-primary"}
                                                         />
                                                     ))}
-                                                    <span className="text-[10px] font-bold text-muted-foreground ml-2 uppercase tracking-widest">{product.rating || 4.9} ({product.soldCount || 120}+)</span>
+                                                    <span className="text-[10px] font-bold text-muted-foreground ml-2 uppercase tracking-widest">{product.rating || 4.9} ({product.soldCount || 766}+)</span>
                                                 </div>
                                                 <h3 className="font-heading text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-1">{product.name}</h3>
                                                 <p className="text-muted-foreground text-sm line-clamp-2 mb-6 leading-relaxed flex-grow">
@@ -191,6 +191,46 @@ const Shop = () => {
                             })}
                         </div>
                     )}
+
+                    {/* Product Features Highlight */}
+                    <AnimatedSection delay={0.2} className="mt-32">
+                        <div className="glass-card rounded-[3rem] overflow-hidden border border-white/20 shadow-premium max-w-4xl mx-auto">
+                            <div className="grid md:grid-cols-2 items-center">
+                                <div className="p-12 md:p-16 space-y-8">
+                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest border border-primary/20">
+                                        <Sparkles size={12} /> Key Features
+                                    </div>
+                                    <h2 className="font-heading text-4xl font-bold text-foreground leading-tight">
+                                        Designed for <span className="text-gradient-gold">Visible Results</span>
+                                    </h2>
+                                    <p className="text-muted-foreground leading-relaxed">
+                                        Our formula isn't just oil — it's a precisely engineered blend of botanical extracts and DHT blockers designed to stop hair fall at the source.
+                                    </p>
+                                    <ul className="space-y-4">
+                                        {[
+                                            "Natural DHT Blockers",
+                                            "Strengthens Hairs & Stops Fall",
+                                            "Strongly Reverse Hair Thinning"
+                                        ].map((feature, idx) => (
+                                            <li key={idx} className="flex items-center gap-3 text-sm font-bold text-foreground/80">
+                                                <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                                    <ArrowRight size={14} />
+                                                </div>
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <div className="bg-white/50 p-8 h-full flex items-center justify-center">
+                                    <img
+                                        src="/product-features.png"
+                                        alt="Product Features Diagram"
+                                        className="w-full max-w-sm drop-shadow-2xl rounded-2xl"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </AnimatedSection>
 
                     {/* Trust Section */}
                     <AnimatedSection delay={0.4} className="mt-40 pt-20 border-t border-border">
