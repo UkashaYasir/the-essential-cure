@@ -9,12 +9,12 @@ VALUES (
     'A powerful blend of 100% natural botanical oils formulated to stop hair fall, promote rapid growth, and restore natural shine and thickness.',
     1700,
     '1450',
-    'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?q=80&w=800&auto=format&fit=crop',
+    '/hero-product-2.png',
     true,
     500,
     'Treatment',
     ARRAY['Hair Fall', 'Growth', 'Luxury'],
-    ARRAY['https://images.unsplash.com/photo-1608248597279-f99d160bfcbc', 'https://images.unsplash.com/photo-1522338242992-e1a54906a8da'],
+    ARRAY['/hero-product-2.png', '/product-features.png'],
     450
 );
 

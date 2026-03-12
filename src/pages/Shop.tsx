@@ -10,6 +10,7 @@ import { useDocumentMeta } from '@/hooks/useDocumentMeta';
 import AnimatedSection from '@/components/AnimatedSection';
 import ReviewCarousel from '@/components/ReviewCarousel';
 import heroProduct from '@/assets/hero-product.png';
+import heroProduct2 from '@/assets/hero-product-2.png';
 
 type Product = {
     id: number;
@@ -31,7 +32,7 @@ const FALLBACK_PRODUCTS: Product[] = [
         description: '100% Natural Formula — Reduces hair fall, promotes growth, and adds natural shine. Crafted with pure botanical oils for visible results in 2–3 weeks.',
         price: 1700,
         sale_price: 1450,
-        image_url: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?q=80&w=800&auto=format&fit=crop",
+        image_url: "/hero-product-2.png",
         stock: 99,
         rating: 4.9,
         soldCount: 766,

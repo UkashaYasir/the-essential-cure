@@ -1095,6 +1095,10 @@ const Cart = () => {
                                             alt={item.name}
                                             className="w-full h-full object-contain rounded-xl"
                                             loading="lazy"
+                                            onError={(e) => {
+                                                const target = e.target as HTMLImageElement;
+                                                target.src = "/hero-product-2.png";
+                                            }}
                                         />
                                     </div>
 
@@ -1152,7 +1156,15 @@ const Cart = () => {
                                             return (
                                                 <div key={product.id} className="glass-card rounded-2xl p-4 flex items-center gap-4 hover:shadow-md transition-shadow">
                                                     <div className="w-20 h-20 bg-primary/5 rounded-xl flex items-center justify-center p-2 shrink-0">
-                                                        <img src={product.image_url} alt={product.name} className="w-full h-full object-contain mix-blend-multiply" />
+                                                        <img
+                                                            src={product.image_url}
+                                                            alt={product.name}
+                                                            className="w-full h-full object-contain mix-blend-multiply"
+                                                            onError={(e) => {
+                                                                const target = e.target as HTMLImageElement;
+                                                                target.src = "/hero-product-2.png";
+                                                            }}
+                                                        />
                                                     </div>
                                                     <div className="flex-1 min-w-0">
                                                         <h4 className="font-bold text-sm text-foreground truncate mb-1">{product.name}</h4>

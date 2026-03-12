@@ -99,7 +99,15 @@ export default function MiniCart() {
                                     return (
                                         <div key={item.id} className="flex gap-4 p-4 bg-white rounded-2xl border border-neutral-100/50 shadow-sm relative group">
                                             <div className="w-20 h-20 bg-cream/50 rounded-xl flex-shrink-0 flex items-center justify-center overflow-hidden relative border border-black/5">
-                                                <img src={item.image_url} alt={item.name} className="w-16 h-16 object-contain" />
+                                                <img
+                                                    src={item.image_url}
+                                                    alt={item.name}
+                                                    className="w-16 h-16 object-contain"
+                                                    onError={(e) => {
+                                                        const target = e.target as HTMLImageElement;
+                                                        target.src = "/hero-product-2.png";
+                                                    }}
+                                                />
                                             </div>
                                             <div className="flex-1 flex flex-col justify-between py-1">
                                                 <div className="pr-6">
