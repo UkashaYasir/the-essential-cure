@@ -149,13 +149,15 @@ export const CouponsTab: React.FC<CouponsTabProps> = ({
 
                                 <div className="space-y-2">
                                     <div className="flex justify-between text-[10px] font-bold text-muted-foreground uppercase tracking-widest">
-                                        <span>Times used</span>
-                                        <span className="text-foreground">{c.usage_count} / {c.usage_limit || 'Unlimited'}</span>
+                                        <span>Remaining Balance</span>
+                                        <span className="text-foreground">
+                                            {c.usage_limit ? Math.max((c.usage_limit - c.usage_count), 0) : '∞'} / {c.usage_limit || '∞'} Left
+                                        </span>
                                     </div>
                                     <div className="w-full h-1.5 bg-white/30 rounded-full overflow-hidden border border-white/20">
                                         <div
-                                            className={`h-full transition-all duration-1000 ${c.usage_count >= (c.usage_limit || 999999) ? 'bg-red-500' : 'bg-secondary'}`}
-                                            style={{ width: `${c.usage_limit ? Math.min((c.usage_count / c.usage_limit) * 100, 100) : 0}%` }}
+                                            className={`h-full transition-all duration-1000 ${c.usage_limit && c.usage_count >= c.usage_limit ? 'bg-red-500' : 'bg-secondary'}`}
+                                            style={{ width: `${c.usage_limit ? Math.max(0, ((c.usage_limit - c.usage_count) / c.usage_limit) * 100) : 100}%` }}
                                         />
                                     </div>
                                 </div>
